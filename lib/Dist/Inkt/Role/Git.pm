@@ -12,19 +12,19 @@ use Moose::Role;
 use Git::Sub qw(tag status log);
 use Types::Standard 'Bool';
 use namespace::autoclean;
- 
+
 has source_control_is_git => (
         is      => "ro",
         isa     => Bool,
         lazy    => 1,
         builder => "_build_source_control_is_git",
 );
- 
+
 sub _build_source_control_is_git {
         my $self = shift;
         !! $self->rootdir->child(".git")->is_dir;
 }
- 
+
 after BUILD => sub {
   my $self = shift;
   return unless $self->source_control_is_git;
