@@ -63,11 +63,19 @@ __END__
 
 =head1 NAME
 
-Dist::Inkt::Role::Git - Dist::Inkt Role to manage dist with git
-
-=head1 SYNOPSIS
+Dist::Inkt::Role::Git - Git functions for Dist::Inkt
 
 =head1 DESCRIPTION
+
+This module has the following functions:
+
+=over
+
+=item * Prevents building the release if there are uncommitted changes.
+
+=item * Tags the release with the version number just before building the tarball.
+
+=back
 
 =head1 BUGS
 
