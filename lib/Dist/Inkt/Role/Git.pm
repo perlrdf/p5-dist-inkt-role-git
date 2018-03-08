@@ -84,6 +84,8 @@ L<https://github.com/kjetilk/p5-dist-inkt-role-git/issues>.
 
 =head1 SEE ALSO
 
+L<Dist::Inkt>
+
 =head1 AUTHOR
 
 Kjetil Kjernsmo E<lt>kjetilk@cpan.orgE<gt>.
