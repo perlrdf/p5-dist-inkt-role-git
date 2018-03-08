@@ -5,8 +5,7 @@
 @prefix prov: <http://www.w3.org/ns/prov#>.
 
 `Dist-Inkt-Role-Git`
-   :programming-language "Perl" ;
-   :shortdesc            "Dist::Inkt Role to manage dist with git";
+   :shortdesc            "Git functions for Dist::Inkt"@en ;    
    :homepage             <https://metacpan.org/release/Dist-Inkt-Role-Git>;
    :download-page        <https://metacpan.org/release/Dist-Inkt-Role-Git>;
    :bug-database         <https://github.com/kjetilk/p5-dist-inkt-role-git/issues>;
@@ -14,7 +13,6 @@
                            :browse <https://github.com/kjetilk/p5-dist-inkt-role-git>;
                            prov:has_provenance <http://git2prov.org/git2prov?giturl=https%3A%2F%2Fgithub.com%2Fkjetilk%2Fp5-dist-inkt-role-git&serialization=PROV-O#>
                          ];
-#   :support-forum        <irc://irc.perl.org/#perlrdf> ;
    :created              2018-03-08;
    :license              <http://dev.perl.org/licenses/>;
    :maintainer           cpan:KJETILK;

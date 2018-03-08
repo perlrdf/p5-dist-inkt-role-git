@@ -3,7 +3,11 @@
 @prefix : <http://ontologi.es/doap-deps#>.
 
 `Dist-Inkt-Role-Git`
-	:test-requirement       [ :on "Test::More 0.96"^^:CpanId ];
-	:develop-recommendation [ :on "Dist::Inkt 0.001"^^:CpanId ];
-	.
+    :test-requirement       [ :on "Test::More 0.96"^^:CpanId ];
+    :runtime-requirement    [ :on "Dist::Inkt 0.001"^^:CpanId ];
+    :runtime-requirement    [ :on "perl 5.014"^^:CpanId ];
+    :runtime-requirement    [ :on "Types::Standard"^^:CpanId ];
+    :runtime-requirement    [ :on "Moose"^^:CpanId ];
+    :runtime-requirement    [ :on "Git::Sub"^^:CpanId ];
+    .
 
