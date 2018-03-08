@@ -9,7 +9,7 @@ our $VERSION   = '0.001';
 
 
 use Moose::Role;
-use Git::Sub qw(tag status);
+use Git::Sub qw(tag status log);
 use Types::Standard 'Bool';
 use namespace::autoclean;
  
@@ -40,7 +40,18 @@ after BUILD => sub {
   }
 
 };
- 
+
+
+before BuildTarball => sub {
+  my $self = shift;
+  return unless $self->source_control_is_git;
+  my $pstr = 'release-' . $self->version;
+  $pstr = 'dev-' . $pstr if ($self->version =~ m/_/);
+  my $short = git::log qw(--pretty=format:'%h' -n 1);
+  $self->log("Tagging $short as $pstr.");
+  git::tag -s => -m => "Releasing $short tagged $pstr.", $pstr;
+};
+
 
 1;
 
