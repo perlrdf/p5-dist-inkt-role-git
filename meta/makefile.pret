@@ -8,6 +8,7 @@
     :runtime-requirement    [ :on "perl 5.014"^^:CpanId ];
     :runtime-requirement    [ :on "Types::Standard"^^:CpanId ];
     :runtime-requirement    [ :on "Moose"^^:CpanId ];
+    :runtime-requirement    [ :on "namespace::autoclean"^^:CpanId ];
     :runtime-requirement    [ :on "Git::Sub"^^:CpanId ];
     .
 
